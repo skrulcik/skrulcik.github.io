@@ -1,0 +1,8 @@
+html, body, div, h1, h2, h3, h4, h5, h6 {
+	background-color: #359;
+	color: #FFF;
+}
+
+#site-title {
+	padding-top: 15em;
+}
