@@ -4,5 +4,16 @@ html, body, div, h1, h2, h3, h4, h5, h6 {
 }
 
 #site-title {
-	padding-top: 15em;
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.qotd {
+	margin-right: 4em;
+	margin-left: 4em;
+	padding: 0.5em;
+}
+.qotd * {
+	background: none;
+	color: #2A477F;
 }
