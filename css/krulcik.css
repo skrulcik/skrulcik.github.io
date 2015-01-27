@@ -17,3 +17,10 @@ html, body, div, h1, h2, h3, h4, h5, h6 {
 	background: none;
 	color: #2A477F;
 }
+
+.btn-default {
+	color: #2A477F;
+}
+.btn-default .active .hover {
+	color: #359;
+}
