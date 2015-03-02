@@ -1,4 +1,4 @@
-html, body, div, h1, h2, h3, h4, h5, h6 {
+html, body {
 	background-color: #359;
 	color: #FFF;
 }
@@ -23,4 +23,18 @@ html, body, div, h1, h2, h3, h4, h5, h6 {
 }
 .btn-default .active .hover {
 	color: #359;
+}
+
+
+.post, .post_title, .post_content {
+	background-color: #FFFFFF;
+	color: #249;
+}
+.post_title {
+	text-align: center;
+	border-bottom: solid 3px #249;
+	margin-bottom: 1em;
+}
+.post_content {
+
 }
