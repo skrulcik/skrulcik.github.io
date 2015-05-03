@@ -1,52 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Scott Krulcik</title>
-    <link rel="icon" href="images/big-favicon.ico">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link href="css/krulcik.css" rel='stylesheet' type='text/css' />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
+
 <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
-    <script type="text/template" id="quote_template">
-        <div class="jumbotron qotd">
-          <h3 class="text-center"> <%= quote %> </h3>
-          <h3 class="text-center"><em><%= author %></em></h3>
+    <!-- Navbar goes here -->
+    <div class="navbar-fixed">
+        <nav class="blue-grey darken-1">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center">Scott Krulcik</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Layout here -->
+    <div class="row blue-grey lighten-4">
+        <!-- Side Bar -->
+        <div class="col s2 white z-depth-0">
+            <!-- Profile Photo -->
+            <div class="card-panel grey lighten-5 z-depth-0">
+                <div class="row valign-wrapper">
+                    <div>
+                        <img src="images/face.jpg" alt="" class="circle responsive-img">
+                    </div>
+                </div>
+                <h5>About Scott</h5>
+                <div class="block">
+                    <p class="">Scott is currently an Software Development Intern at Facebook, where he works on the WhatsApp iOS platform. He will graduate from Carnegie Mellon University with a BS in Computer Science in 2018. In addition to his schoolwork, he is active in Prom App LLC, a company he co-founded, and which has an iOS app on the app store.</p>
+                </div>
+            </div>
+            <!-- Information -->
+            <div class="card-panel grey lighten-5 z-depth-0">
+                
+                <h5>Contact</h5>
+                <ul class="block">
+                    <li><a href="mailto:skrulcik@andrew.cmu.edu?Subject=Scott%20-%20I%20Saw%20Your%20Webpage%20And...%20">
+                            skrulcik@andrew.cmu.edu</a></li>
+                    <li><a href="prom-app.com">Prom App</a></li>
+                </ul>
+            </div>
         </div>
-    </script>
-    <div class="container" id="site-title">
-        <h1 class="col-sm-12 text-center"> Scott Krulcik </h1>
-        <hr>
-    </div>
-    <div class="container" id="quote-container">
-    </div>
 
-    <div class="container">
-        <div class="row" style="padding-top:4em">
-            <div class="col-xs-0 col-sm-2 col-md-2">
-            </div>
-            <div class="col-xs-3 col-sm-2 col-md-2 text-center">
-                <a role="button" class="btn btn-default btn-lg" href="http://www.cs.cmu.edu/~15251/schedule.html">251</a>
-            </div>
-            <div class="col-xs-3 col-sm-2 col-md-2 text-center">
-                <a role="button" class="btn btn-default btn-lg" href="http://www.cs.cmu.edu/~./15150/assign.html">150</a>
-            </div>
-            <div class="col-xs-3 col-sm-2 col-md-2 text-center">
-                <a role="button" class="btn btn-default btn-lg" href="https://piazza.com/class/i4su9yytt5c1pg">451</a>
-            </div>
-            <div class="col-xs-3 col-sm-2 col-md-2 text-center">
-                <a role="button" class="btn btn-default btn-lg" href="https://blackboard.andrew.cmu.edu/webapps/portal/frameset.jsp?url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_5363200_1%26url%3D">217</a>
-            </div>
-            <div class="col-xs-0 col-sm-2 col-md-2">
+        <div class="col s10">
+        <!-- Page content  -->
+            <div class="row">
+        <!-- Classes -->
+                <h4 class="center"> Classes </h4>
+                <div class="row">
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <a href="http://www.cs.cmu.edu/~15251/schedule.html" class="waves-effect waves-teal btn-flat">15-251</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <a href="http://www.cs.cmu.edu/~./15150/assign.html" class="waves-effect waves-teal btn-flat">15-150</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <a href="https://piazza.com/class/i4su9yytt5c1pg" class="waves-effect waves-teal btn-flat">70-451</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <a href="https://blackboard.andrew.cmu.edu/webapps/portal/frameset.jsp?url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_5363200_1%26url%3D" class="waves-effect waves-teal btn-flat">36-217</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- Resources -->
+                <h4 class="center"> Resources </h4>
+                <div class="row">
+                    <div class="col s4">
+                        <div class="card resource">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <h5>Wolfram Alpha</h5>
+                                <form id="calculate" action="http://www.wolframalpha.com/input/" method="get" target="_blank">
+                                    <input type="text" name="i" id="i" placeholder="Enter Equation"/>
+                                    <input type="hidden" name="t" value="emd01" />
+                                    <div id="eq" title="compute"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- Wolfram -->
+                    <div class="col s8">
+                        <div class="card resource">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <iframe id="forecast_embed" type="text/html" frameborder="0" height="220" width="100%" src="http://forecast.io/embed/#lat=40.442492&lon=-79.942553&name=Pittsburgh"> </iframe>
+                            </div>
+                        </div>
+                    </div> <!-- Weather -->
+                    <div class="row">
+                    <div class="col s4">
+                        <div class="card resource">
+                            <div class="card-content center grey lighten-5 z-depth-0">
+                                <h5>The New York Times</h5>
+                                <div id="news">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
     </div>
-
-    <script src="js/krulcik.js"></script>
+    <script type="text/javascript">
+        $.get("http://google.com/", function(){
+            alert("goog");
+        });
+        $.get( "http://www.nytimes.com/pages/national/index.html", function() {
+          alert( "success" );
+        });
+        $.ajax({
+          url: "http://www.nytimes.com/pages/national/index.html",
+          context: document.body
+        }).done(function() {
+          alert("heyyyy");
+        });
+        </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
