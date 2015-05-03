@@ -123,19 +123,15 @@
         </div>
     </div>
     <script type="text/javascript">
-        $.get("http://google.com/", function(){
-            alert("goog");
-        });
-        $.get( "http://www.nytimes.com/pages/national/index.html", function() {
-          alert( "success" );
-        });
         $.ajax({
-          url: "http://www.nytimes.com/pages/national/index.html",
-          context: document.body
-        }).done(function() {
-          alert("heyyyy");
+            type:     "GET",
+            url:      "http://http://www.nytimes.com/",
+            dataType: "jsonp",
+            success: function(data){
+                console.log(data);
+            }
         });
-        </script>
+    </script>
 </body>
 </html>
 
