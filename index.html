@@ -45,7 +45,7 @@
                 <h5>Contact</h5>
                 <ul class="block">
                     <li><a href="mailto:skrulcik@andrew.cmu.edu?Subject=Scott%20-%20I%20Saw%20Your%20Webpage%20And...%20">
-                            skrulcik@andrew.cmu.edu</a></li>
+                           email</a></li>
                     <li><a href="prom-app.com">Prom App</a></li>
                 </ul>
             </div>
@@ -109,29 +109,20 @@
                         </div>
                     </div> <!-- Weather -->
                     <div class="row">
-                    <div class="col s4">
-                        <div class="card resource">
+                    <div class="col s12">
+                        <div class="card">
                             <div class="card-content center grey lighten-5 z-depth-0">
                                 <h5>The New York Times</h5>
                                 <div id="news">
+                                    <iframe type="text/html" frameboarder="0" width="100%" height="440" src="http://www.nytimes.com"></iframe>
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div> <!-- New York Times -->
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $.ajax({
-            type:     "GET",
-            url:      "http://http://www.nytimes.com/",
-            dataType: "jsonp",
-            success: function(data){
-                console.log(data);
-            }
-        });
-    </script>
 </body>
 </html>
 
