@@ -7,3 +7,23 @@
 .resource {
 	height: 240px;
 }
+
+.card a {
+    /* Full size buttons within card */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width : 600px) {
+    nav {
+        /* Allow 2-line logo in nav bar */
+        height: 128px;
+    }
+    .content {
+        /* Compensate for larger navbar */
+        padding-top: 64px;
+    }
+}
+
+

@@ -17,112 +17,113 @@
     <!-- Navbar goes here -->
     <div class="navbar-fixed">
         <nav class="blue-grey darken-1">
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center">Scott Krulcik</a>
+            <div class="nav-wrapper valign-wrapper">
+                <a href="#!" class="brand-logo center valign">Scott Krulcik</a>
             </div>
         </nav>
     </div>
-
-    <!-- Page Layout here -->
-    <div class="row blue-grey lighten-4">
-        <!-- Side Bar -->
-        <div class="col s2 white z-depth-0">
-            <!-- Profile Photo -->
-            <div class="card-panel grey lighten-5 z-depth-0">
-                <div class="row valign-wrapper">
-                    <div>
-                        <img src="images/face.jpg" alt="" class="circle responsive-img">
+    <div class="content">
+        <!-- Page Layout here -->
+        <div class="row blue-grey lighten-4">
+            <!-- Side Bar -->
+            <div class="col s0 m3 white z-depth-0">
+                <!-- Profile Photo -->
+                <div class="card-panel grey lighten-5 z-depth-0">
+                    <div class="row valign-wrapper">
+                        <div>
+                            <img src="images/face.jpg" alt="" class="circle responsive-img">
+                        </div>
+                    </div>
+                    <h5>About Scott</h5>
+                    <div class="block">
+                        <p class="">Scott is currently an Software Development Intern at Facebook, where he works on the WhatsApp iOS platform. He will graduate from Carnegie Mellon University with a BS in Computer Science in 2018. In addition to his schoolwork, he is active in Prom App LLC, a company he co-founded, and which has an iOS app on the app store.</p>
                     </div>
                 </div>
-                <h5>About Scott</h5>
-                <div class="block">
-                    <p class="">Scott is currently an Software Development Intern at Facebook, where he works on the WhatsApp iOS platform. He will graduate from Carnegie Mellon University with a BS in Computer Science in 2018. In addition to his schoolwork, he is active in Prom App LLC, a company he co-founded, and which has an iOS app on the app store.</p>
+                <!-- Information -->
+                <div class="card-panel grey lighten-5 z-depth-0">
+                    
+                    <h5>Contact</h5>
+                    <ul class="block">
+                        <li><a href="mailto:skrulcik@andrew.cmu.edu?Subject=Scott%20-%20I%20Saw%20Your%20Webpage%20And...%20">
+                               email</a></li>
+                        <li><a href="prom-app.com">Prom App</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- Information -->
-            <div class="card-panel grey lighten-5 z-depth-0">
-                
-                <h5>Contact</h5>
-                <ul class="block">
-                    <li><a href="mailto:skrulcik@andrew.cmu.edu?Subject=Scott%20-%20I%20Saw%20Your%20Webpage%20And...%20">
-                           email</a></li>
-                    <li><a href="prom-app.com">Prom App</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col s10">
-        <!-- Page content  -->
-            <div class="row">
-        <!-- Classes -->
-                <h4 class="center"> Classes </h4>
+    
+            <div class="col s12 m9">
+            <!-- Page content  -->
                 <div class="row">
-                    <div class="col s3">
-                        <div class="card">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <a href="http://www.cs.cmu.edu/~15251/schedule.html" class="waves-effect waves-teal btn-flat">15-251</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3">
-                        <div class="card">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <a href="http://www.cs.cmu.edu/~./15150/assign.html" class="waves-effect waves-teal btn-flat">15-150</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3">
-                        <div class="card">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <a href="https://piazza.com/class/i4su9yytt5c1pg" class="waves-effect waves-teal btn-flat">70-451</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3">
-                        <div class="card">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <a href="https://blackboard.andrew.cmu.edu/webapps/portal/frameset.jsp?url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_5363200_1%26url%3D" class="waves-effect waves-teal btn-flat">36-217</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <!-- Resources -->
-                <h4 class="center"> Resources </h4>
-                <div class="row">
-                    <div class="col s4">
-                        <div class="card resource">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <h5>Wolfram Alpha</h5>
-                                <form id="calculate" action="http://www.wolframalpha.com/input/" method="get" target="_blank">
-                                    <input type="text" name="i" id="i" placeholder="Enter Equation"/>
-                                    <input type="hidden" name="t" value="emd01" />
-                                    <div id="eq" title="compute"></div>
-                                </form>
-                            </div>
-                        </div>
-                    </div> <!-- Wolfram -->
-                    <div class="col s8">
-                        <div class="card resource">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <iframe id="forecast_embed" type="text/html" frameborder="0" height="220" width="100%" src="http://forecast.io/embed/#lat=40.442492&lon=-79.942553&name=Pittsburgh"> </iframe>
-                            </div>
-                        </div>
-                    </div> <!-- Weather -->
+            <!-- Classes -->
+                    <h4 class="center"> Classes </h4>
                     <div class="row">
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-content center grey lighten-5 z-depth-0">
-                                <h5>The New York Times</h5>
-                                <div id="news">
-                                    <iframe type="text/html" frameboarder="0" width="100%" height="440" src="http://www.nytimes.com"></iframe>
+                        <div class="col s6 m3">
+                            <div class="card">
+                                <div class="center grey lighten-5 z-depth-0">
+                                    <a href="http://www.cs.cmu.edu/~15251/schedule.html" class="waves-effect waves-teal btn-flat">15-251</a>
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- New York Times -->
+                        <div class="col s6 m3">
+                            <div class="card">
+                                <div class="center grey lighten-5 z-depth-0">
+                                    <a href="http://www.cs.cmu.edu/~./15150/assign.html" class="waves-effect waves-teal btn-flat">15-150</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s6 m3">
+                            <div class="card">
+                                <div class="center grey lighten-5 z-depth-0">
+                                    <a href="https://piazza.com/class/i4su9yytt5c1pg" class="waves-effect waves-teal btn-flat">70-451</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s6 m3">
+                            <div class="card">
+                                <div class="center grey lighten-5 z-depth-0">
+                                    <a href="https://blackboard.andrew.cmu.edu/webapps/portal/frameset.jsp?url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_5363200_1%26url%3D" class="waves-effect waves-teal btn-flat">36-217</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- Resources -->
+                    <h4 class="center"> Resources </h4>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="card resource">
+                                <div class="card-content center grey lighten-5 z-depth-0">
+                                    <h5>Wolfram Alpha</h5>
+                                    <form id="calculate" action="http://www.wolframalpha.com/input/" method="get" target="_blank">
+                                        <input type="text" name="i" id="i" placeholder="Enter Equation"/>
+                                        <input type="hidden" name="t" value="emd01" />
+                                        <div id="eq" title="compute"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> <!-- Wolfram -->
+                        <div class="col s12 m6">
+                            <div class="card resource">
+                                <div class="card-content center grey lighten-5 z-depth-0">
+                                    <iframe id="forecast_embed" type="text/html" frameborder="0" height="220" width="100%" src="http://forecast.io/embed/#lat=40.442492&lon=-79.942553&name=Pittsburgh"> </iframe>
+                                </div>
+                            </div>
+                        </div> <!-- Weather -->
+                        <div class="row">
+                        <div class="col s12">
+                            <div class="card">
+                                <div class="card-content center grey lighten-5 z-depth-0">
+                                    <h5>The New York Times</h5>
+                                    <div id="news">
+                                        <iframe type="text/html" frameboarder="0" width="100%" height="440" src="http://www.nytimes.com"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- New York Times -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- End Content -->
 </body>
 </html>
 
