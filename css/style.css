@@ -1,29 +1,33 @@
 
 
-.block {
-	padding-left: 1em;
+/* Side Navigation Panel */
+.side-nav {
+    width: 400px;
 }
 
-.resource {
-	height: 240px;
+.side-nav p, .side-nav a, .side-nav li {
+    font-size: 1.2em;
 }
 
-.card a {
-    /* Full size buttons within card */
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* Main Body */
+#classes .card a {
+    height: 2em;
 }
 
+.main {
+    padding-left: 400px;
+}
 
-@media only screen and (max-width : 600px) {
-    nav {
-        /* Allow 2-line logo in nav bar */
-        height: 128px;
+.resource.card {
+    height: 300px;
+}
+
+.resource.card .card-content {
+    width: 100%;
+}
+
+@media (max-width : 600px) {
+    main {
+        padding-left: 0;
     }
-    .content {
-        /* Compensate for larger navbar */
-        padding-top: 64px;
-    }
 }
-
-

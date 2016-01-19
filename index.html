@@ -2,7 +2,8 @@
 <html>
 <head>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
 
     <!--Let browser know website is optimized for mobile-->
@@ -10,104 +11,99 @@
 </head>
 
 <body>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-
-    <!-- Navbar goes here -->
-    <div class="navbar-fixed">
-        <nav class="blue-grey darken-1">
-            <div class="nav-wrapper valign-wrapper">
-                <a href="#!" class="brand-logo center valign">Scott Krulcik</a>
-            </div>
-        </nav>
-    </div>
-    <div class="content">
-        <!-- Page Layout here -->
-        <div class="row blue-grey lighten-4">
+    <ul id="nav-mobile" class="side-nav fixed">
+        <li>
+            <h3>Classes</h3>
+        </li>
+        <hr>
+        <li>
+            <a href="http://www.cs.cmu.edu/~15210/schedule.html" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Parallel Algorithms <em class="light">15-210</em></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.cs.cmu.edu/~charlie/courses/15-214/2016-spring/index.html#schedule" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Software Engineering <em class="light">15-214</em></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://blackboard.andrew.cmu.edu/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_7101446_1" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Cognitive Psych <em class="light">86-211</em></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15294t-s16/" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Rapid Prototyping <em class="light">15-294</em></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://blackboard.andrew.cmu.edu/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_6763175_1&handle=announcements_entry&mode=view" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Corporate Strategy  <em class="light">70-440</em></span>
+            </a>
+        </li>
+        <li>
+            <a href="" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Lunar Rover <em class="light">16-865</em></span>
+            </a>
+        </li>
+        <li>
+            <h3>Resources</h3>
+        </li>
+        <hr>
+        <li>
+            <a href="http://autolab.andrew.cmu.edu" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Autolab</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/SkottyK" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Github</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://gradescope.com/courses/2285" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Gradescope</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://travis-ci.com/CMU-15-214/skrulcik" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Travis CI</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.wolframalpha.com" class="waves-effect">
+                <img class="circle responsive-img"/>
+                <span>Wolfram Alpha</span>
+            </a>
+        </li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="main">
+        <div class="row">
             <div class="col s12">
-            <!-- Page content  -->
-                <div class="row">
-            <!-- Classes -->
-                    <h4 class="center"> Classes </h4>
-                    <div class="row">
-                        <!-- First Row -->
-                        <div class="col s6 m4">
-                            <div class="card">
-                                <div class="center grey lighten-5 z-depth-0">
-                                    <a href="https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" class="waves-effect waves-teal btn-flat">Accounting</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s6 m4">
-                            <div class="card">
-                                <div class="center grey lighten-5 z-depth-0">
-                                    <a href="https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" class="waves-effect waves-teal btn-flat">Calc III</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s6 m4">
-                            <div class="card">
-                                <div class="center grey lighten-5 z-depth-0">
-                                    <a href="https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" class="waves-effect waves-teal btn-flat">Systems</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Second Row -->
-                        <div class="col s6 m4 offset-m2">
-                            <div class="card">
-                                <div class="center grey lighten-5 z-depth-0">
-                                    <a href="https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" class="waves-effect waves-teal btn-flat">Comp. Perception</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s6 offset-s3 m4">
-                            <div class="card">
-                                <div class="center grey lighten-5 z-depth-0">
-                                    <a href="https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" class="waves-effect waves-teal btn-flat">AI</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            <!-- Resources -->
-                    <h4 class="center"> Resources </h4>
-                    <div class="row">
-                        <div class="col s12 m6">
-                            <div class="card resource">
-                                <div class="card-content center grey lighten-5 z-depth-0">
-                                    <h5>Wolfram Alpha</h5>
-                                    <form id="calculate" action="http://www.wolframalpha.com/input/" method="get" target="_blank">
-                                        <input type="text" name="i" id="i" placeholder="Enter Equation"/>
-                                        <input type="hidden" name="t" value="emd01" />
-                                        <div id="eq" title="compute"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div> <!-- Wolfram -->
-                        <div class="col s12 m6">
-                            <div class="card resource">
-                                <div class="card-content center grey lighten-5 z-depth-0">
-                                    <iframe id="forecast_embed" type="text/html" frameborder="0" height="220" width="100%" src="http://forecast.io/embed/#lat=40.4414504&lon=-79.9364773&name=Pittsburgh"></iframe>
-                                </div>
-                            </div>
-                        </div> <!-- Weather -->
-                        <div class="row">
-                        <div class="col s12">
-                            <div class="card">
-                                <div class="card-content center grey lighten-5 z-depth-0">
-                                    <h5>The New York Times</h5>
-                                    <div id="news">
-                                        <iframe type="text/html" frameboarder="0" width="100%" height="440" src="https://www.nytimes.com"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- New York Times -->
+                <div class="card resource">
+                    <div class="card-content center z-depth-0">
+                        <iframe id="forecast_embed" type="text/html" frameborder="0" height="280" width="100%" src="http://forecast.io/embed/#lat=40.4414504&lon=-79.9364773&name=Pittsburgh"></iframe>
                     </div>
                 </div>
-            </div>
+            </div> <!-- Weather -->
         </div>
-    </div><!-- End Content -->
+    </div>
+
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
 
