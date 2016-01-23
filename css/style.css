@@ -14,7 +14,7 @@
     height: 2em;
 }
 
-.main {
+main {
     padding-left: 400px;
 }
 
@@ -26,8 +26,17 @@
     width: 100%;
 }
 
-@media (max-width : 600px) {
+.button-collapse i {
+    width: 64px;
+    height: 64px;
+}
+
+@media (max-width : 992px) {
     main {
         padding-left: 0;
     }
+}
+
+.full-width {
+    width: 100%;
 }
