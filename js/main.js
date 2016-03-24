@@ -3,6 +3,11 @@ $('.button-collapse').sideNav({
       closeOnClick: true
     });
 
+/* Reload page periodically to update calendar. */
+setTimeout(function(){
+   window.location.reload(1);
+}, 50000);
+
 
 var backgroundColors = [
     "red",

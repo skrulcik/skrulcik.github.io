@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# add keys to file
+echo 'Adding keys to files...'
+bash "scripts/expose_clientID" > /dev/null
+
+# Copy website files
+echo 'Copying website to www...'
+sudo cp -r ./public/* ~/www/
+
+# replace real keys with placeholders
+echo 'Stripping keys from files...'
+bash "scripts/hide_clientID" > /dev/null
+
+echo "Finished deploying."
+
+

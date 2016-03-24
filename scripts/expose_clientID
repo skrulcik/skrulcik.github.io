@@ -1,0 +1,11 @@
+#!/bin/bash
+
+KEY_FILE='keys/.clientID'
+TMP_FILE_NAME='.keyswapper'
+TARGET_FILE='js/calendar.js'
+
+cp $TARGET_FILE $TMP_FILE_NAME
+sed s/'<RAW_CLIENT_ID>'/$(cat $KEY_FILE)/ $TMP_FILE_NAME > $TARGET_FILE
+
+rm $TMP_FILE_NAME
+
