@@ -63,31 +63,24 @@ function loadCalendarApi() {
 */
 function listUpcomingEvents() {
 	var request = gapi.client.calendar.events.list({
-	'calendarId': 'primary',
-	'timeMin': (new Date()).toISOString(),
-	'showDeleted': false,
-	'singleEvents': true,
-	'maxResults': 10,
-	'orderBy': 'startTime'
+        'calendarId': 'primary',
+        'timeMin': (new Date()).toISOString(),
+        'showDeleted': false,
+        'singleEvents': true,
+        'maxResults': 10,
+        'orderBy': 'startTime'
 	});
 
-	request.execute(function(resp) {
-        var events = resp.items;
-        appendPre('Upcoming events:');
 
+    
+    request.execute(function(resp) {
+        var events = resp.items;
         if (events.length > 0) {
-            for (i = 0; i < events.length; i++) {
-                var event = events[i];
-                var when = event.start.dateTime;
-                if (!when) {
-                    when = event.start.date;
-                }
-                appendPre(event.summary + ' (' + when + ')')
-            }
+            appendPre(htmlForCalendarEventList(events));
         } else {
             appendPre('No upcoming events found.');
         }
-	});
+    });
 }
 
 /**
@@ -97,8 +90,31 @@ function listUpcomingEvents() {
 * @param {string} message Text to be placed in pre element.
 */
 function appendPre(message) {
-	var pre = document.getElementById('output');
-	var textContent = document.createTextNode(message + '\n');
-	pre.appendChild(textContent);
+    var currentHTML = $('#output').html();
+    $('#output').html(currentHTML + message);
+}
+
+function htmlForCalendarEventList(events) {
+    html = '<ul class="collection">';
+    for (i = 0; i < events.length; i++) {
+        html += htmlForCalendarEvent(events[i]);
+    }
+    html += '</ul>';
+    return html;
+}
+
+
+/**
+* Render a decent looking Event Box for Google Calendar event
+* Assumes Materialize.css is loaded
+*/
+function htmlForCalendarEvent(event) {
+    var startTime = event.start.dateTime;
+    if (!startTime) {
+        startTime = event.start.date;
+    }
+    var startTimeString = moment(startTime).fromNow();
+    return '<li class="collection-item"><h5>' + event.summary
+                + '</h5><p>' + startTimeString + '</p></li>';
 }
 

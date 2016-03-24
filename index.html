@@ -5,9 +5,6 @@
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
-		
-    <!-- Google Calendar API -->
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -106,7 +103,7 @@
         </div>
         <div class="row"> <!-- Calendar Card -->
             <div class="col s12">
-                <div class="card resource">
+                <div class="card">
                     <div class="card-content center z-depth-0">
                         <div id="displayevents">
                             <div id="authorize-div" style="display: none">
@@ -116,7 +113,7 @@
                                 Authorize
                                 </button>
                             </div>
-                            <pre id="output"></pre>
+                            <div id="output"></div>
                         </div>
                     </div>
                 </div>
@@ -127,7 +124,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
+		
+    <!-- Google Calendar API -->
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </body>
 </html>
 
