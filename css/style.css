@@ -1,4 +1,8 @@
 
+.nav-wrapper .brand-logo,
+.nav-wrapper a {
+    color: #333;
+}
 
 /* Side Navigation Panel */
 .side-nav {
