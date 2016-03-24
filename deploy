@@ -6,7 +6,7 @@ bash "scripts/expose_clientID" > /dev/null
 
 # Copy website files
 echo 'Copying website to www...'
-sudo cp -r ./public/* ~/www/
+cp -r ./* ~/www/
 
 # replace real keys with placeholders
 echo 'Stripping keys from files...'
