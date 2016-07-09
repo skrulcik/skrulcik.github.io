@@ -75,12 +75,20 @@ function listUpcomingEvents() {
     
     request.execute(function(resp) {
         var events = resp.items;
+        clearPre();
         if (events.length > 0) {
             appendPre(htmlForCalendarEventList(events));
         } else {
             appendPre('No upcoming events found.');
         }
     });
+}
+
+/**
+ * Clear existing events from the calendar.
+ */
+function clearPre() {
+    $('#output').empty();
 }
 
 /**
@@ -118,3 +126,5 @@ function htmlForCalendarEvent(event) {
                 + '</h5><p>' + startTimeString + '</p></li>';
 }
 
+// Refresh the calendar every 5 minutes
+setInterval(loadCalendarApi, 300000 /* 5 minutes */);
