@@ -1,0 +1,12 @@
+[
+    {
+        "targetUrl": "https://mail.google.com/a/andrew.cmu.edu/",
+        "primaryText": "CMU Email",
+        "secondaryText": ""
+    },
+    {
+        "targetUrl": "https://inbox.google.com/u/0/",
+        "primaryText": "Gmail",
+        "secondaryText": "Inbox"
+    }
+]
