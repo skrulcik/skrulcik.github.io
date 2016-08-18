@@ -3,15 +3,18 @@
  * list along with header rows to define sections. Assumes usage of
  * Materialize.js.
  *
+ * Section object fields:
+ *
+ * sectionTitle: Title displayed at the top of the section
+ * sectionLinks: Array of link objects (see below) describing the links in the
+ * given section.
+ *
  * Link object fields:
  *
  * targetUrl: URL to go to
  * primaryText: Large title to display
  * secondaryText: More subtle, smaller text
  */
-
-// ID of the unordered list that links will be insterted into
-var ulElementId = "#linkfarm";
 
 /*
  * Adds a list of link items to the given list.
@@ -50,33 +53,34 @@ var insertLinkItems = function (ulElement, titleText, linkArray) {
 }
 
 /*
- * Add a section of links to the list. Requires a name for the section and
- * a filename that contains link objects.
+ * Loads a JSON file with an array of section objects, and adds both the
+ * headers and links that it defines into the specified unordered list element.
  */
-var addSection = function (ulElement, linkFilename, titleText) {
+var addLinks = function (ulElement, linkFilename) {
     var req = new XMLHttpRequest();
     req.onreadystatechange = function() {
         if (req.readyState == 4 && req.status == 200) {
-            var linkArray = JSON.parse(this.responseText);
-            insertLinkItems(ulElement, titleText, linkArray);
+            // Load JSON resource
+            var sectionJsonArray = JSON.parse(this.responseText);
+            // For each section in the loaded json, add the title and section
+            for (var sectionJson of sectionJsonArray) {
+                var titleText = sectionJson["sectionTitle"];
+                var linkArray = sectionJson["sectionLinks"];
+                // TODO: Null checks and default values for optional parameters
+                insertLinkItems(ulElement, titleText, linkArray);
+            }
         } else {
             console.log("Could not load links for filename " + linkFilename);
         }
     };
-    req.open("GET", linkFilename, false /* Synchronous to preserve order */);
+    req.open("GET", linkFilename, true /* asynchronous */);
     req.send();
 }
 
-// Link import information
-var classTitle = "Course Pages";
-var classFilename = "rsc/classLinks.json";
-var resourceTitle = "Resources";
-var resourceFilename = "rsc/resourceLinks.json";
-var mailTitle = "Mail";
-var mailFilename = "rsc/mailLinks.json";
+// ID of the unordered list that links will be insterted into
+var ulElementId = "#linkfarm";
+// File containing array of "section" objects
+var linksFilename = "rsc/links.json";
 
-// Add sections
-addSection(ulElementId, classFilename, classTitle);
-addSection(ulElementId, resourceFilename, resourceTitle);
-addSection(ulElementId, mailFilename, mailTitle);
+addLinks(ulElementId, linksFilename);
 

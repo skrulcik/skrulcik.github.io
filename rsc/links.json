@@ -1,0 +1,67 @@
+[
+    {
+        "sectionTitle": "Course Pages",
+        "sectionLinks": [
+            {
+                "targetUrl": "http://www.cs.cmu.edu/~15210/schedule.html",
+                "primaryText": "Parallel Algorithms",
+                "secondaryText": "15-210"
+            },
+            {
+                "targetUrl": "https://www.cs.cmu.edu/~charlie/courses/15-214/2016-spring/index.html#schedule",
+                "primaryText": "Software Engineering",
+                "secondaryText": "15-214"
+            },
+            {
+                "targetUrl": "https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1",
+                "primaryText": "Blackboard",
+                "secondaryText": "70-440, 86-211, 67-306"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Resources",
+        "sectionLinks": [
+            {
+                "targetUrl": "https://github.com/skrulcik",
+                "primaryText": "Github",
+                "secondaryText": ""
+            },
+            {
+                "targetUrl": "http://autolab.andrew.cmu.edu",
+                "primaryText": "Autolab",
+                "secondaryText": ""
+            },
+            {
+                "targetUrl": "https://piazza.com/class/ij36icgpxye4g8",
+                "primaryText": "Piazza",
+                "secondaryText": ""
+            },
+            {
+                "targetUrl": "https://gradescope.com/courses/2285",
+                "primaryText": "Gradescope",
+                "secondaryText": ""
+            },
+            {
+                "targetUrl": "https://travis-ci.com/CMU-15-214/skrulcik",
+                "primaryText": "Travis CI",
+                "secondaryText": ""
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Email",
+        "sectionLinks": [
+            {
+                "targetUrl": "https://mail.google.com/a/andrew.cmu.edu/",
+                "primaryText": "CMU Email",
+                "secondaryText": ""
+            },
+            {
+                "targetUrl": "https://inbox.google.com/u/0/",
+                "primaryText": "Gmail",
+                "secondaryText": "Inbox"
+            }
+        ]
+    }
+]
