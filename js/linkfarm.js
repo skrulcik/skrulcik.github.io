@@ -17,14 +17,17 @@
  */
 
 /*
- * Adds a list of link items to the given list.
+ * Generates the HTML string for the given section.
  */
-var insertLinkItems = function (ulElement, titleText, linkArray) {
-    // Accumulate entire string, rather than appending individually, to allow
-    // multiple sections to be added concurrently
-    var elemString = "";
+var htmlForSection = function (sectionJson) {
+    // Parse section JSON
+    var titleText = sectionJson["sectionTitle"];
+    var linkArray = sectionJson["sectionLinks"];
+
+    // TODO: Null checks and default values for optional parameters
 
     // Title for this section of links
+    var elemString = "";
     elemString += "<li><h4>";
     elemString += titleText;
     elemString += "</h4></li>\n<hr>\n";
@@ -49,7 +52,7 @@ var insertLinkItems = function (ulElement, titleText, linkArray) {
         elemString += "</a></li>";
         console.log("Adding " + primaryText)
     }
-    $(ulElement).append(elemString);
+    return elemString
 }
 
 /*
@@ -64,10 +67,9 @@ var addLinks = function (ulElement, linkFilename) {
             var sectionJsonArray = JSON.parse(this.responseText);
             // For each section in the loaded json, add the title and section
             for (var sectionJson of sectionJsonArray) {
-                var titleText = sectionJson["sectionTitle"];
-                var linkArray = sectionJson["sectionLinks"];
-                // TODO: Null checks and default values for optional parameters
-                insertLinkItems(ulElement, titleText, linkArray);
+                // Add the HTML for each section in the order it is listed in
+                // the resources file
+                $(ulElement).append(htmlForSection(sectionJson));
             }
         } else {
             console.log("Could not load links for filename " + linkFilename);
