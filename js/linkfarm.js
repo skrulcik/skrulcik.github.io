@@ -50,7 +50,6 @@ var htmlForSection = function (sectionJson) {
             elemString += "</em></span>";
         }
         elemString += "</a></li>";
-        console.log("Adding " + primaryText)
     }
     return elemString
 }
@@ -71,8 +70,9 @@ var addLinks = function (ulElement, linkFilename) {
                 // the resources file
                 $(ulElement).append(htmlForSection(sectionJson));
             }
+            console.log("Loaded links from " + linkFilename);
         } else {
-            console.log("Could not load links for filename " + linkFilename);
+            console.log("Could not load links from filename " + linkFilename);
         }
     };
     req.open("GET", linkFilename, true /* asynchronous */);
