@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +15,18 @@
 <body>
     <header>
         <div id="slide-out" class="side-nav fixed">
-            <ul id="linkfarm">
-                <!-- Links inserted here by linkfarm.js -->
+            <ul>
+                {% for linkcategory in site.data.linkcategories %}
+                <li><h4>{{ linkcategory.title }}</h4></li>
+                <hr>
+                    {% for link in linkcategory.links %}
+                    <li>
+                        <a class="waves-effect" href="{{ link.targetUrl }}">
+                            {{ link.primaryText }}  <em class="light">{{ link.secondaryText }}</em>
+                        </a>
+                    </li>
+                    {% endfor %}
+                {% endfor %}
             </ul>
         </div>
         <nav class="white hide-on-large-only">
@@ -57,7 +69,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/linkfarm.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
     <!-- Google Calendar API -->
