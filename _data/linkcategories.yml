@@ -4,14 +4,11 @@
         secondaryText: 15-410
         targetUrl: 'https://www.cs.cmu.edu/~410/projects.html'
       - primaryText: Canvas
-        secondaryText: 70-391, 15-313
+        secondaryText: 70-391
         targetUrl: 'https://cmu.instructure.com/'
       - primaryText: Gradescope
         secondaryText: 15-300
         targetUrl: 'https://gradescope.com/courses/3929'
-      - primaryText: Software Engineering
-        secondaryText: 15-313
-        targetUrl: 'http://www.cs.cmu.edu/~ckaestne/15313/2016/#schedule'
       - primaryText: Research
         secondaryText: 15-300
         targetUrl: 'http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15300-f16/www/'
@@ -21,8 +18,6 @@
         targetUrl: 'https://github.com/skrulcik/'
       - primaryText: Piazza
         targetUrl: 'https://piazza.com/class/is6f9y2tdia44d'
-      - primaryText: Toggl
-        targetUrl: 'https://toggl.com/app/timer'
 - title: Email and Google Apps
   links:
       - primaryText: Inbox
