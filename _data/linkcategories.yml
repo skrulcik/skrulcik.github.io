@@ -1,32 +1,42 @@
 - title: Course Pages
   links:
-      - primaryText: OS
-        secondaryText: 15-410
-        targetUrl: 'https://www.cs.cmu.edu/~410/projects.html'
-      - primaryText: Canvas
-        secondaryText: 70-391
-        targetUrl: 'https://cmu.instructure.com/'
-      - primaryText: Gradescope
-        secondaryText: 15-300
-        targetUrl: 'https://gradescope.com/courses/3929'
-      - primaryText: Research
-        secondaryText: 15-300
-        targetUrl: 'http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15300-f16/www/'
+      - primaryText: Distributed Systems
+        secondaryText: 15-440
+        targetUrl: 'http://www.cs.cmu.edu/~15-440'
+      - primaryText: Algorithm Design
+        secondaryText: 15-451
+        targetUrl: 'http://www.cs.cmu.edu/~15451'
+      - primaryText: Security and Privacy
+        secondaryText: 15-316
+        targetUrl: 'https://cmu-15-316.github.io/'
+      - primaryText: Marketing
+        secondaryText: 70-381
+        targetUrl: 'https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1'
+      - primaryText: Biology
+        secondaryText: 03-121
+        targetUrl: 'https://blackboard.andrew.cmu.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1'
 - title: Resources
   links:
-      - primaryText: Github
-        targetUrl: 'https://github.com/skrulcik/'
       - primaryText: Piazza
-        targetUrl: 'https://piazza.com/class/is6f9y2tdia44d'
+        targetUrl: 'https://piazza.com/class/ixwduw084tc395?cid=1'
+      - primaryText: Gradescope
+        targetUrl: 'https://gradescope.com/courses/5782'
+      - primaryText: Moodle
+        targetUrl: 'http://contest.cs.cmu.edu/moodle/'
+      - primaryText: News
+        targetUrl: 'https://reddit.com/r/news+worldnews+security'
 - title: Email and Google Apps
   links:
-      - primaryText: Inbox
-        secondaryText: GMail
-        targetUrl: 'https://inbox.google.com/u/0/'
+      - primaryText: Email
+        targetUrl: 'https://mail.google.com/mail/u/0/#inbox'
+      - primaryText: Calendar
+        targetUrl: 'https://calendar.google.com/calendar/'
+      - primaryText: Drive
+        targetUrl: 'https://drive.google.com/drive/u/0/my-drive'
+- title: CMU Apps
+  links:
       - primaryText: CMU Email
         targetUrl: 'https://mail.google.com/a/andrew.cmu.edu/'
       - primaryText: CMU Drive
         targetUrl: 'https://drive.google.com/drive/u/1/my-drive'
-      - primaryText: Calendar
-        targetUrl: 'https://calendar.google.com/calendar/b/1'
 
