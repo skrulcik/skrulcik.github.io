@@ -24,7 +24,7 @@
       - primaryText: Moodle
         targetUrl: 'http://contest.cs.cmu.edu/moodle/'
       - primaryText: News
-        targetUrl: 'https://reddit.com/r/news+worldnews+security'
+        targetUrl: 'https://reddit.com/r/full_news+qualitynews+worldnews+security'
 - title: Email and Google Apps
   links:
       - primaryText: Email
