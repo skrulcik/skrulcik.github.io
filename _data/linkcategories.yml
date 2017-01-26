@@ -23,6 +23,8 @@
         targetUrl: 'https://gradescope.com/courses/5782'
       - primaryText: Moodle
         targetUrl: 'http://contest.cs.cmu.edu/moodle/'
+      - primaryText: Autolab
+        targetUrl: 'https://autolab.andrew.cmu.edu/'
       - primaryText: News
         targetUrl: 'https://reddit.com/r/full_news+qualitynews+worldnews+security'
 - title: Email and Google Apps
