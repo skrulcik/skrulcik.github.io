@@ -1,6 +1,6 @@
 *.kwpublish
 
-keys
+tags
 
 _site
 .sass-cache

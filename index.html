@@ -2,36 +2,26 @@
 ---
 <!DOCTYPE html>
 <html>
-<head>
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
+    <head>
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-</head>
+        <!-- Meta tags -->
+        <title>Scott Krulcik</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-<body class="blue-grey darken-3 white-text">
-    <div class="container">
-        <div class="row">
-            <div class="col-s12">
-                <h1>Scott Krulcik</h1>
+        <!-- Fonts and CSS - Trying out [Pure](purecss.io)  -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/base-min.css">
+        <link type="text/css" rel="stylesheet" href="css/pages/index.css" media="screen"/>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="name-box"><h1 class="name"><span class="h2v">Scott</span> <span class="h2v">Krulcik</span></h1></div>
+            <div class="link-group">
+                {% for page in site.data.pages %}
+                    <a class="link h2v" href="{{ page.url }}">{{ page.name }}</a>
+                {% endfor %}
             </div>
         </div>
-        <div class="row">
-            <div class="col-s12">
-                <p><em>Coming soon</em></p>
-            </div>
-        </div>
-    </div>
-
-    <script defer type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-</body>
+    </body>
 </html>
-
-
-
-
-
-
-
 

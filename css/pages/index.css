@@ -1,0 +1,112 @@
+/**
+ * index.css
+ *
+ * CSS Styling for scottkrulcik.com/
+ *
+ * Palette:
+ *
+ * White   #FFFFFF
+ * LGray   #C6C6C6
+ * MGray   #767676
+ * DGray   #303030
+ * Black   #101010
+ */
+
+ /******************************************************************************
+  * Global settings
+ ******************************************************************************/
+body {
+    font: sans-serif;
+    background-color: #101010;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: italic;
+}
+
+/*******************************************************************************
+ * Content styling
+ ******************************************************************************/
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.name {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.name-box {
+    text-align: center;
+}
+
+.link-group {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.link {
+    width: 25%;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-size: 1.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.link:hover {
+    border-width: 1px;
+    border-color: #C6C6C6;
+    color: #C6C6C6;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFFFF;
+}
+
+/*******************************************************************************
+ * Mobile modifications
+ ******************************************************************************/
+@media (max-width: 800px) {
+    .container {
+        /* Undo old container styling */
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        transform: none;
+        padding: 1em;
+    }
+
+    .name-box {
+        text-align: left;
+    }
+
+    .link-group {
+        text-align: left;
+    }
+
+    .link {
+        padding: 0;
+        padding-bottom: 0.25em;
+    }
+
+    /* Spans of text that should appear horizontally on large screens, but
+     * change to vertical on smaller screens. */
+    .h2v {
+        display: block;
+        width: 100%;
+    }
+}
+
