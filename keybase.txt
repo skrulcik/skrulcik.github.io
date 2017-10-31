@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/skrulcik
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://scottkrulcik.com
+  * I am skrulcik (https://keybase.io/skrulcik) on keybase.
+  * I have a public key ASA-Oj_fjH2liVYV9KDmJmb8sQjdteYcuhluawE26c3GhAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203e3a3fdf8c7da5895615f4a0e62666fcb108ddb5e61cba196e6b0136e9cdc6840a",
+      "host": "keybase.io",
+      "kid": "01203e3a3fdf8c7da5895615f4a0e62666fcb108ddb5e61cba196e6b0136e9cdc6840a",
+      "uid": "4c942294601cf84f071d186760aecd19",
+      "username": "skrulcik"
+    },
+    "merkle_root": {
+      "ctime": 1509462061,
+      "hash": "e1a71884000cf5eb2379a748c8e2e6c84b00649654433e0c49bea10fe638bb5738d1ec570880a047306022c188aed5317c11e2af652c5d04729d913926d822e1",
+      "hash_meta": "397f9f490d3260105c7faa940ea517d8f4d84e085727adb6ffa196a8829b1d75",
+      "seqno": 1650398
+    },
+    "service": {
+      "hostname": "scottkrulcik.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1509462074,
+  "expire_in": 504576000,
+  "prev": "f5700b8318494d9186ae6a37710b08549412fc45946ee55062e1458b047dad3a",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgPjo/34x9pYlWFfSg5iZm/LEI3bXmHLoZbmsBNunNxoQKp3BheWxvYWTFA0h7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwM2UzYTNmZGY4YzdkYTU4OTU2MTVmNGEwZTYyNjY2ZmNiMTA4ZGRiNWU2MWNiYTE5NmU2YjAxMzZlOWNkYzY4NDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwM2UzYTNmZGY4YzdkYTU4OTU2MTVmNGEwZTYyNjY2ZmNiMTA4ZGRiNWU2MWNiYTE5NmU2YjAxMzZlOWNkYzY4NDBhIiwidWlkIjoiNGM5NDIyOTQ2MDFjZjg0ZjA3MWQxODY3NjBhZWNkMTkiLCJ1c2VybmFtZSI6InNrcnVsY2lrIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA5NDYyMDYxLCJoYXNoIjoiZTFhNzE4ODQwMDBjZjVlYjIzNzlhNzQ4YzhlMmU2Yzg0YjAwNjQ5NjU0NDMzZTBjNDliZWExMGZlNjM4YmI1NzM4ZDFlYzU3MDg4MGEwNDczMDYwMjJjMTg4YWVkNTMxN2MxMWUyYWY2NTJjNWQwNDcyOWQ5MTM5MjZkODIyZTEiLCJoYXNoX21ldGEiOiIzOTdmOWY0OTBkMzI2MDEwNWM3ZmFhOTQwZWE1MTdkOGY0ZDg0ZTA4NTcyN2FkYjZmZmExOTZhODgyOWIxZDc1Iiwic2Vxbm8iOjE2NTAzOTh9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoic2NvdHRrcnVsY2lrLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM0In0sImN0aW1lIjoxNTA5NDYyMDc0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6ImY1NzAwYjgzMTg0OTRkOTE4NmFlNmEzNzcxMGIwODU0OTQxMmZjNDU5NDZlZTU1MDYyZTE0NThiMDQ3ZGFkM2EiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEAq+RZonBqsCY6uFwaqLFdWxzTUIkRNoHJMAEPfj1QoiYx/Br+u9XdnV4zMUhBCIANB66drqq+msNfuQ8l94+4CqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgdpi7bylcNwQM38zbAY983ZS5BMorlpgRol54XjjeG1ejdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/skrulcik
+
+==================================================================
