@@ -1,65 +1,68 @@
 /*******************************************************************************
  * Colors & Fills
  ******************************************************************************/
-var blueMaterial = function() { specularMaterial(0, 94, 140); };
-var environmentLight = function() {
-    //move your mouse to change light position
-    var locX = mouseX - width / 2;
-    var locY = height - mouseY * 2;
-    // to set the light position,
-    // think of the world's coordinate as:
-    // -width/2,-height/2 -------- width/2,-height/2
-    //                |            |
-    //                |     0,0    |
-    //                |            |
-    // -width/2,height/2--------width/2,height/2
-    pointLight(255, 255, 255, locX, locY, 0);
-    pointLight(255, 255, 255, locX, locY, 0);
-    pointLight(255, 255, 255, locX, locY, 0);
-    pointLight(255, 255, 255, locX, locY, 0);
-};
 
 /*******************************************************************************
  * Constants
  ******************************************************************************/
 var horizontalBoxCount = 10;
 var verticalBoxCount = 10;
-var boxSize;
+var boxWidth;
+var boxHeight;
+
+function computeBoxSize() {
+    boxWidth = ceil(windowWidth / horizontalBoxCount);
+    boxHeight = ceil(windowHeight / verticalBoxCount);
+}
 
 function setup() {
-    createCanvas(windowWidth, windowHeight, WEBGL);
-    background(255, 0, 200);
-    windowResized();
+    createCanvas(windowWidth, windowHeight);
+    computeBoxSize();
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    boxSize = max(windowWidth / horizontalBoxCount, windowHeight / verticalBoxCount);
+    computeBoxSize;
+}
+
+function drawInRect(x, y, w, h) {
+    var m = 5;
+    noStroke();
+    fill(255, 0, 200);
+    // Top
+    quad(x + m, y + m,
+        x + w - m, y + m,
+        x + w - m, y + h - m,
+        x + m, y + h - m);
+    fill(20, 200, 200);
+}
+
+/* Gives the distance between two points scaled to "boxs" instead of standard
+ * pixels. */
+function boxDist(x1, y1, x2, y2) {
+    return sqrt(((x1 - x2) / boxWidth) ** 2 +  ((y1 - y2) / boxHeight) ** 2);
 }
 
 function draw() {
-    rotateX(radians(120));
-    rotateZ(radians(-30));
-    // Set up environment
-    environmentLight();
-    // translate(-width / 2, -height / 2, 0);
-    xOffset = -horizontalBoxCount * boxSize / 2;
-    xOffset *= sqrt(3) / 2;
-    translate(xOffset, 0, 0);
-
-    // Define box-drawing characterstics
-    blueMaterial();
-    specularMaterial(255, 0, 0);
-    // Draw box grid
-    var boxX = 0;
-    var boxY = 0;
+    clear();
     for (var r = 0; r < verticalBoxCount; r++) {
         for (var c = 0; c < horizontalBoxCount; c++) {
-            box(boxSize * 0.75);
-            translate(boxSize, 0, 0);
+            // Top left
+            x = c * boxWidth;
+            y = r * boxHeight;
+
+            // Center
+            cx = x + boxWidth / 2;
+            cy = y + boxHeight / 2;
+
+            // Distance between center and mouse from mouse, never 0!
+            d = boxDist(cx, cy, mouseX, mouseY) + 0.0000000001;
+
+            // Pop up boxes that are within ~4 of the mouse
+            y -= min(boxHeight, boxHeight / d);
+
+            drawInRect(x, y, boxWidth, boxHeight);
         }
-        translate(0, boxSize, 0);
-        translate(-boxSize * horizontalBoxCount, 0, 0);
     }
 }
 
