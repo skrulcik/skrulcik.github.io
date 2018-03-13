@@ -1,6 +1,9 @@
 /*******************************************************************************
- * Colors & Fills
+ * Colors & Fills - set in setup() b/c P5
  ******************************************************************************/
+var TOP_COLOR;
+var FRONT_COLOR;
+var SIDE_COLOR;
 
 /*******************************************************************************
  * Constants
@@ -18,40 +21,43 @@ function computeBoxSize() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     computeBoxSize();
+
+    TOP_COLOR = color(255, 0, 200);
+    FRONT_COLOR = color(20, 200, 200);
+    SIDE_COLOR = color(10, 125, 125);
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    computeBoxSize;
+    computeBoxSize();
 }
 
 function drawInRect(x, y, w, h) {
-    var m = 5;
+    var m = 20;
     noStroke();
     // Side
-    fill(10, 175, 175);
-    quad(x + w, y + m,
-        x + w - m, y + h - m,
-        x + w - m, y + 3 * h - m,
-        x + w, y + 2 * h + m);
+    fill(SIDE_COLOR);
+    quad(x + w, y,
+        x + w - m, y + h,
+        x + w - m, y + 3 * h,
+        x + w, y + 2 * h);
     // Add shadow for the top
-    drawingContext.shadowOffsetX = -5;
-    drawingContext.shadowOffsetY = -5;
-    drawingContext.shadowBlur = 10;
-    drawingContext.shadowColor = "black";
+    // drawingContext.shadowOffsetX = -5;
+    // drawingContext.shadowOffsetY = -5;
+    // drawingContext.shadowBlur = 10;
+    // drawingContext.shadowColor = "black";
     // Front
-    fill(20, 200, 200);
-    quad(x, y + 3 * h - m,
-        x + w - m, y + 3 * h - m,
-        x + w - m, y + h - m,
-        x, y + h - m);
+    fill(FRONT_COLOR);
+    quad(x - m, y + 3 * h,
+        x + w - m, y + 3 * h,
+        x + w - m, y + h,
+        x - m, y + h);
     // Top
-    // fill(255, 0, 200);
-    fill(100);
-    quad(x + m, y + m,
-        x + w, y + m,
-        x + w - m, y + h - m,
-        x, y + h - m);
+    fill(TOP_COLOR);
+    quad(x, y,
+        x + w, y,
+        x + w - m, y + h,
+        x - m, y + h);
     // Turn off shadow
     drawingContext.shadowOffsetX = 0;
     drawingContext.shadowOffsetY = 0;
@@ -80,7 +86,7 @@ function draw() {
             d = boxDist(cx, cy, mouseX, mouseY) + 0.0000000001;
 
             // Pop up boxes that are within ~4 of the mouse
-            y -= min(boxHeight, boxHeight / d);
+            y -= min(boxHeight, boxHeight / d**1.5);
 
             drawInRect(x, y, boxWidth, boxHeight);
         }
