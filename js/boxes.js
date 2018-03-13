@@ -23,9 +23,9 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     computeBoxSize();
 
-    TOP_COLOR = color(255, 0, 200);
-    FRONT_COLOR = color(20, 200, 200);
-    SIDE_COLOR = color(10, 125, 125);
+    TOP_COLOR = color(85, 25, 255);
+    FRONT_COLOR = color(0, 255, 20);
+    SIDE_COLOR = color(20, 180, 30);
 }
 
 function windowResized() {
