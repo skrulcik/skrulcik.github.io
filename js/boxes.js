@@ -8,14 +8,15 @@ var SIDE_COLOR;
 /*******************************************************************************
  * Constants
  ******************************************************************************/
-var horizontalBoxCount = 10;
-var verticalBoxCount = 10;
+var horizontalBoxCount = 15;
+var verticalBoxCount = 15;
 var boxWidth;
 var boxHeight;
 
 function computeBoxSize() {
-    boxWidth = ceil(windowWidth / horizontalBoxCount);
-    boxHeight = ceil(windowHeight / verticalBoxCount);
+    // - 1 makes sure the boxes go just beyond the screen
+    boxWidth = ceil(windowWidth / (horizontalBoxCount - 1));
+    boxHeight = ceil(windowHeight / (verticalBoxCount - 1));
 }
 
 function setup() {
@@ -86,7 +87,7 @@ function draw() {
             d = boxDist(cx, cy, mouseX, mouseY) + 0.0000000001;
 
             // Pop up boxes that are within ~4 of the mouse
-            y -= min(boxHeight, boxHeight / d**1.5);
+            y -= min(boxHeight * 1.5, boxHeight / d**1.5);
 
             drawInRect(x, y, boxWidth, boxHeight);
         }
