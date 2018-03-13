@@ -28,13 +28,34 @@ function windowResized() {
 function drawInRect(x, y, w, h) {
     var m = 5;
     noStroke();
-    fill(255, 0, 200);
-    // Top
-    quad(x + m, y + m,
-        x + w - m, y + m,
+    // Side
+    fill(10, 175, 175);
+    quad(x + w, y + m,
         x + w - m, y + h - m,
-        x + m, y + h - m);
+        x + w - m, y + 3 * h - m,
+        x + w, y + 2 * h + m);
+    // Add shadow for the top
+    drawingContext.shadowOffsetX = -5;
+    drawingContext.shadowOffsetY = -5;
+    drawingContext.shadowBlur = 10;
+    drawingContext.shadowColor = "black";
+    // Front
     fill(20, 200, 200);
+    quad(x, y + 3 * h - m,
+        x + w - m, y + 3 * h - m,
+        x + w - m, y + h - m,
+        x, y + h - m);
+    // Top
+    // fill(255, 0, 200);
+    fill(100);
+    quad(x + m, y + m,
+        x + w, y + m,
+        x + w - m, y + h - m,
+        x, y + h - m);
+    // Turn off shadow
+    drawingContext.shadowOffsetX = 0;
+    drawingContext.shadowOffsetY = 0;
+    drawingContext.shadowBlur = 0;
 }
 
 /* Gives the distance between two points scaled to "boxs" instead of standard
