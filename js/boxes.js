@@ -36,7 +36,12 @@ function windowResized() {
     computeBoxSize();
 }
 
-function drawInRect(x, y, w, h, boxOffset) {
+/* Draws a the 3D box for the given "tile" on the screen. The term "tile" is
+ * used because even though the tile is described by a rectangle on the screen,
+ * the 3D box may extend beyond the bounds of the rectangle. The "tiled" look
+ * will always be maintained, though, assuming left-right to top-down drawing
+ * order. */
+function drawTile(x, y, w, h, boxOffset) {
     y -= boxOffset;
     var m = 20; // margin
     noStroke();
@@ -94,7 +99,7 @@ function draw() {
             // Pop up boxes that are within ~4 of the mouse
             boxOffset = min(maxPop, boxHeight / d**1.5);
 
-            drawInRect(x, y, boxWidth, boxHeight, boxOffset);
+            drawTile(x, y, boxWidth, boxHeight, boxOffset);
         }
     }
 }
